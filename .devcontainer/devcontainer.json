@@ -49,11 +49,7 @@
 		5432
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": [
-		"pip install pipenv",
-		"pipenv install --dev --system",
-		"npm install -g pyright@1.1.99"
-	],
+	"postCreateCommand": "pip install pipenv" && "pipenv install --system" && "npm install -g pyright@1.1.99",
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	"remoteUser": "root"
 }
